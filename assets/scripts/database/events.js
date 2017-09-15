@@ -12,3 +12,11 @@ const onCreateAccount = function(event) {
     .then(userUi.onCreateSuccess)
     .catch(userUi.onError)
 }
+
+// const onSigninAccount = function(event) {
+//   event.preventDefault()
+// }
+
+module.exports = {
+  onCreateAccount
+}
