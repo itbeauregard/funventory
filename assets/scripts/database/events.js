@@ -15,10 +15,15 @@ const onCreateAccount = function(event) {
     .catch(userUi.onError)
 }
 
-// const onSigninAccount = function(event) {
-//   event.preventDefault()
-// }
+const onSignIn = function(event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  userApi.signIn(data)
+   .then(userUi.onSignInSuccess)
+   .catch(userUi.onSignOutError)
+}
 
 module.exports = {
-  onCreateAccount
+  onCreateAccount,
+  onSignIn
 }

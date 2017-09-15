@@ -17,5 +17,6 @@ $(() => {
 
 $(()=> {
   $("#create-account").on("submit", accountEvents.onCreateAccount)
+  $("#signin-account").on("submit", accountEvents.onSignIn)
 
 })
