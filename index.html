@@ -14,12 +14,20 @@
     <body class="container-fluid">
       <h1>Inventory</h1>
       <form class="accounts" id="create-account">
-        <h1>Create a New Account</h1>
+        <h1>Create a new account</h1>
         <input required type="text" name="credentials[email]" placeholder="Username">
         <input required type="password" name="credentials[password]" placeholder="Password">
         <input required type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
         <button type="submit" id="create-button">Create an Account</button>
-
       </form>
+
+      <form class="accounts" id="signin-account">
+
+        <h1> Sign in to your account</h1>
+        <input required type="text" name="credentials[email]" placeholder="Username">
+        <input required type="password" name="credentials[password]" placeholder="Password">
+        <button type="submit" id="signin-button">Sign in</button>
+
+        </form>
     </body>
 </html>
