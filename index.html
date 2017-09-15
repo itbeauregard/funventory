@@ -12,14 +12,35 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+      <script id="product-inventory-template" type="text/x-handlebars-template">
+          <h1>Product Inventory</h1>
+          <br>
+            <table class='table'>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Product Name</th>
+                  <th>SKU Number</th>
+                  <th>Department</th>
+                  <th>Quantity</th>
+                  <th>Unit</th>
+                </tr>
+              </thead>
+              <tbody id='append-products-here'>
+              {{#each fields}}
+                <tr class={{id}}>
+                  <td>{{id}}</td>
+                  <td>{{product_name}}</td>
+                  <td>{{sku_number}}</td>
+                  <td>{{department}}</td>
+                  <td>{{quantity[number]}}</td>
+                  <td>{{quantity[unit]}}</td>
+                  <td><a class="button" data-id={{id}}>Delete</a></td>
+                </tr>
+              {{/each}}
+              </tbody>
+            </table>
+        </script>
     </body>
 </html>
