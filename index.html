@@ -8,9 +8,9 @@
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
       <!-- Do not add `script` tags-->
-      <script src="assets/scripts/database/ui.js" type="text/javascript" charset="utf-8"></script>
-      <!-- <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script> -->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src=https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js></script>
     </head>
     <body class="container-fluid">
 
@@ -40,8 +40,8 @@
                   <td>{{product_name}}</td>
                   <td>{{sku_number}}</td>
                   <td>{{department}}</td>
-                  <td>{{quantity[number]}}</td>
-                  <td>{{quantity[unit]}}</td>
+                  <td>{{quantity.number}}</td>
+                  <td>{{quantity.unit}}</td>
                   <td><a class="button" data-id={{id}}>Delete</a></td>
                 </tr>
               {{/each}}
