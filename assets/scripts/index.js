@@ -19,4 +19,6 @@ $(() => {
   $('#signin-account').on('submit', accountEvents.onSignIn)
   $('#change-password').on('submit', accountEvents.onChangePassword)
   $('#signout-account').on('submit', accountEvents.onSignOut)
+
+  $('#get-table').on('click', accountEvents.onGetAllProducts)
 })

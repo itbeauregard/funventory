@@ -36,9 +36,20 @@ const onSignOut = function (event) {
     .then(userUi.onSignOutSuccess)
     .catch(userUi.onSignOutError)
 }
+
+const onGetAllProducts = function (event) {
+  console.log('passing through events.js')
+  event.preventDefault()
+  const data = getFormFields(this)
+  userApi.getAllProducts(data)
+    .then(userUi.onGetAllProductsSuccess)
+    .catch(userUi.onGetAllProductsError)
+}
+
 module.exports = {
   onCreateAccount,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onGetAllProducts
 }
