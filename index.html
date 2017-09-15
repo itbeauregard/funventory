@@ -12,14 +12,77 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
+      <div class='account-forms'>
+        <!-- Account error messages -->
+        <div id='warning-messages'>
+          <p class="error" id="password-error">Double check your old password.</p>
+          <p class="success" id="password-success">You successfully changed your password!</p>
+          <p class="error" id="create-account-error">Your username may be already taken, try another.</p>
+          <p class="error" id="password-match-error">Your password fields don't match.</p>
+          <p class="success" id="create-account-success">You successfully created an account!</p>
+          <p class="error" id="login-error">Wrong password or email.</p>
+          <p class="error" id="sign-in-please">Please sign in to your account or sign up for a new one.</p>
+        </div>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+        <!-- Account login Form-->
+        <form class="accounts" id='account-login'>
+          <h1>Sign in to your account</h1>
+          <br>
+          <div class='form-group columns'>
+            <div class='column'>
+              <input class="input" type="text" name="credentials[email]" placeholder="User Email">
+            </div>
+            <div class='column'>
+              <input class="input" type="password" name="credentials[password]" placeholder="Password">
+            </div>
+          </div>
+          <br>
+          <button type="submit" id='login' class='button'>Log In</button>
+        </form>
+
+        <!-- Create Account Form-->
+        <form class='accounts' id='create-account'>
+          <h1>Create a new account</h1>
+          <div class="columns">
+            <div class="field column">
+              <div class="control">
+                <input required class="input is-medium" type="text" name="credentials[email]" placeholder="Username">
+              </div>
+            </div>
+            <div class="field column">
+              <div class="control">
+                <input required class="input is-medium" type="password" name="credentials[password]" placeholder="Password">
+              </div>
+            </div>
+            <div class="field column">
+              <div class="control">
+                <input required class="input is-medium" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+              </div>
+            </div>
+          </div>
+          <button type="submit" class='button is-primary is-large' id='create-button' >Create New Account</button>
+        </form>
+
+        <!-- Change Password Form-->
+        <form class='accounts' id='change-password'>
+          <h1>Change your password</h1>
+          <br>
+          <div class='form-group columns'>
+            <div class='field column'>
+              <div class='control'>
+                <input required class="input is-large" type="password" name="passwords[old]" placeholder="Old Password">
+              </div>
+            </div>
+            <div class='field column'>
+              <div class='control'>
+                <input required class="input is-large" type="password" name="passwords[new]" placeholder="New Password">
+              </div>
+            </div>
+          </div>
+          <br>
+          <button type="submit" class='button is-black is-large' id="change-button" name='submit'>Change Password</button>
+        </form>
+
+      </div>
     </body>
 </html>
