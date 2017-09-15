@@ -2,7 +2,7 @@
 
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
-const ui = require('./database/ui.js')
+const databaseEvents = require('./database/events.js')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -17,5 +17,5 @@ $(() => {
 
 
 $(() => {
-  $('#get-table').on('click', ui.drawInventoryTable)
+  $('#get-table').on('click', databaseEvents.onGetAllProducts)
 })

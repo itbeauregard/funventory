@@ -1,41 +1,9 @@
 'use strict'
 
-const getFormFields = require('../../../lib/get-form-fields.js')
 const app = require('../store.js')
 
-const drawInventoryTable = function (event) {
-  event.preventDefault()
+const onGetAllProductsSuccess = function (data) {
   console.log('first line inside function')
-  const data = [{
-      "id": 1,
-      "product_name": "Apple",
-      "sku_number": 123456,
-      "department": "Produce",
-      "quantity": {
-        "number": 5,
-        "unit": "bushels"
-      },
-  },
-  {
-      "id": 2,
-      "product_name": "Pear",
-      "sku_number": 123456,
-      "department": "Produce",
-      "quantity": {
-        "number": 5,
-        "unit": "bushels"
-      },
-  },
-  {
-      "id": 3,
-      "product_name": "Orange",
-      "sku_number": 123456,
-      "department": "Produce",
-      "quantity": {
-        "number": 5,
-        "unit": "bushels"
-      },
-  }]
   console.log(data)
   $(() => {
     const theTemplateScript = $('#product-inventory-template').html()
@@ -53,6 +21,42 @@ const drawInventoryTable = function (event) {
   })
 }
 
+const onGetAllProductsError = function (response) {
+  console.error(response)
+}
+//
+// const data = [{
+//     "id": 1,
+//     "product_name": "Apple",
+//     "sku_number": 123456,
+//     "department": "Produce",
+//     "quantity": {
+//       "number": 5,
+//       "unit": "bushels"
+//     },
+// },
+// {
+//     "id": 2,
+//     "product_name": "Pear",
+//     "sku_number": 123456,
+//     "department": "Produce",
+//     "quantity": {
+//       "number": 5,
+//       "unit": "bushels"
+//     },
+// },
+// {
+//     "id": 3,
+//     "product_name": "Orange",
+//     "sku_number": 123456,
+//     "department": "Produce",
+//     "quantity": {
+//       "number": 5,
+//       "unit": "bushels"
+//     },
+// }]
+
 module.exports = {
-  drawInventoryTable
+  onGetAllProductsSuccess,
+  onGetAllProductsError
 }
