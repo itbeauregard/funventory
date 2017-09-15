@@ -14,7 +14,7 @@ const onSignInSuccess = function(data) {
   app.user = data.user
 }
 
-const onSignOutError = function(response) {
+const onSignInError = function(response) {
   console.error(response)
 }
 
@@ -25,12 +25,25 @@ const onChangePasswordSuccess = function() {
 const onChangePasswordError = function(response) {
   console.log(response)
 }
+
+const onSignOutSuccess = function() {
+  console.log('You successfully sign out')
+  app.user = null
+}
+
+const onSignOutError = function(response) {
+  console.log(response)
+}
+
 module.exports = {
   onCreateSuccess,
   onError,
   onSignInSuccess,
   onSignOutError,
   onChangePasswordSuccess,
-  onChangePasswordError
+  onChangePasswordError,
+  onSignOutSuccess,
+  onSignOutError
+
 
 }

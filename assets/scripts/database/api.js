@@ -34,8 +34,20 @@ const changePassword = function (data){
   })
 }
 
+const signOut = function () {
+console.log("passing through the api.js")
+return $.ajax({
+  url: app.host + '/sign-out/' + app.user.id,
+  method: 'DELETE',
+  headers: {
+    Authorization: 'Token token=' + app.user.token
+  }
+})
+}
+
 module.exports = {
   create,
   signIn,
-  changePassword
+  changePassword,
+  signOut
 }

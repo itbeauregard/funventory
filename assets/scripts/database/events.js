@@ -20,7 +20,7 @@ const onSignIn = function(event) {
   const data = getFormFields(event.target)
   userApi.signIn(data)
    .then(userUi.onSignInSuccess)
-   .catch(userUi.onSignOutError)
+   .catch(userUi.onSignInError)
 }
 
 const onChangePassword = function(event) {
@@ -30,8 +30,16 @@ const onChangePassword = function(event) {
     .then(userUi.onChangePasswordSuccess)
     .catch(userUi.onChangePasswordError)
 }
+
+const onSignOut = function(event) {
+  event.preventDefault()
+  userApi.signOut()
+    .then(userUi.onSignOutSuccess)
+    .catch(userUi.onSignOutError)
+}
 module.exports = {
   onCreateAccount,
   onSignIn,
-  onChangePassword
+  onChangePassword,
+  onSignOut
 }
