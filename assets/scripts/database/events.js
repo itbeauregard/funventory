@@ -23,7 +23,15 @@ const onSignIn = function(event) {
    .catch(userUi.onSignOutError)
 }
 
+const onChangePassword = function(event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  userApi.changePassword(data)
+    .then(userUi.onChangePasswordSuccess)
+    .catch(userUi.onChangePasswordError)
+}
 module.exports = {
   onCreateAccount,
-  onSignIn
+  onSignIn,
+  onChangePassword
 }

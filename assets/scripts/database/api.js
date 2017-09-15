@@ -22,7 +22,20 @@ const signIn = function (data){
 })
 }
 
+const changePassword = function (data){
+  console.log("passing through the api.js")
+  return $.ajax({
+    url: app.host + '/change-password/' + app.user.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   create,
-  signIn
+  signIn,
+  changePassword
 }
