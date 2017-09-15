@@ -1,29 +1,28 @@
 'use strict'
 
-
 const userApi = require('./api.js')
 const userUi = require('./ui.js')
 const getFormFields = require('../../../lib/get-form-fields')
 
-const onCreateAccount = function(event) {
+const onCreateAccount = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log("passing through event js")
+  console.log('passing through event js')
   console.log(data)
   userApi.create(data)
     .then(userUi.onCreateSuccess)
     .catch(userUi.onError)
 }
 
-const onSignIn = function(event) {
+const onSignIn = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   userApi.signIn(data)
-   .then(userUi.onSignInSuccess)
-   .catch(userUi.onSignInError)
+    .then(userUi.onSignInSuccess)
+    .catch(userUi.onSignInError)
 }
 
-const onChangePassword = function(event) {
+const onChangePassword = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   userApi.changePassword(data)
@@ -31,7 +30,7 @@ const onChangePassword = function(event) {
     .catch(userUi.onChangePasswordError)
 }
 
-const onSignOut = function(event) {
+const onSignOut = function (event) {
   event.preventDefault()
   userApi.signOut()
     .then(userUi.onSignOutSuccess)
