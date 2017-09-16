@@ -11,10 +11,30 @@ const createProduct = function (data) {
   })
 }
 
+const indexOfProducts = function () {
+  return $.ajax({
+    url: app.host + '/products',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
+const showProduct = function () {
+  return $.ajax({
+    url: app.host + '/products/' + app.products._id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
 const updateProduct = function (data) {
   console.log('passing through products stuff!!!')
   return $.ajax({
-    url: app.host + '/products', + app.product._id,
+    url: app.host + '/products/' + app.product._id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token
@@ -23,7 +43,20 @@ const updateProduct = function (data) {
   })
 }
 
+const deleteProduct = function () {
+  return $.ajax({
+    url: app.host + '/products/' + app.product._id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
 module.exports = {
   createProduct,
-  updateProduct
+  indexOfProducts,
+  showProduct,
+  updateProduct,
+  deleteProduct
 }
