@@ -63,15 +63,18 @@
               </thead>
               <tbody id='append-products-here'>
               {{#each fields}}
+              <form class='row-form' id={{_id}}>
                 <tr class={{_id}}>
                   <td>{{_id}}</td>
                   <td>{{product_name}}</td>
                   <td>{{sku_number}}</td>
                   <td>{{department}}</td>
-                  <td>{{quantity_number}}</td>
-                  <td>{{quantity_unit}}</td>
+                  <td><input type='number' name='quantity_number' value={{quantity_number}}></td>
+                  <td><input type='text' name='quantity_unit' value={{quantity_unit}}></td>
+                  <td><a class="button" data-id={{_id}}>Update</a></td>
                   <td><a class="button" data-id={{_id}}>Delete</a></td>
                 </tr>
+              </form>
               {{/each}}
               </tbody>
             </table>
