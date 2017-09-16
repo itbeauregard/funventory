@@ -10,6 +10,8 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+      <!-- Handlebars Script -->
+      <script src=https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js></script>
     </head>
     <body class="container-fluid">
       <h1>Inventory</h1>
@@ -39,7 +41,45 @@
       <form class="accounts" id="signout-account">
         <h1> Sign out</h1>
         <button type="submit" id="signout-button">Sign out</button>
-      </form>
+      </form
+
+      <button id='get-table' class='button' type='submit'>Get Inventory Table</button>
+
+      <div id='table-holder'>
+      </div>
+
+      <script id="product-inventory-template" type="text/x-handlebars-template">
+          <h1>Product Inventory</h1>
+          <br>
+            <table class='table'>
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Product Name</th>
+                  <th>SKU Number</th>
+                  <th>Department</th>
+                  <th>Quantity</th>
+                  <th>Unit</th>
+                </tr>
+              </thead>
+              <tbody id='append-products-here'>
+              {{#each fields}}
+              <form class='row-form' id={{_id}}>
+                <tr class={{_id}}>
+                  <td>{{_id}}</td>
+                  <td>{{product_name}}</td>
+                  <td>{{sku_number}}</td>
+                  <td>{{department}}</td>
+                  <td><input type='number' name='quantity_number' value={{quantity_number}}></td>
+                  <td><input type='text' name='quantity_unit' value={{quantity_unit}}></td>
+                  <td><a class="button" data-id={{_id}}>Update</a></td>
+                  <td><a class="button" data-id={{_id}}>Delete</a></td>
+                </tr>
+              </form>
+              {{/each}}
+              </tbody>
+            </table>
+        </script>
 
     </body>
 </html>
