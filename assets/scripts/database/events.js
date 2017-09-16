@@ -46,10 +46,21 @@ const onGetAllProducts = function (event) {
     .catch(userUi.onGetAllProductsError)
 }
 
+const onUpdateProduct = function (event) {
+  console.log('passing through update events.js')
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  // may need to update name of create after html is created
+  userApi.updateProduct(data)
+    .then(userUi.onUpdateProductSuccess)
+    .catch(userUi.onUpdateProductFail)
+}
+
 module.exports = {
   onCreateAccount,
   onSignIn,
   onChangePassword,
   onSignOut,
-  onGetAllProducts
+  onGetAllProducts,
+  onUpdateProduct
 }

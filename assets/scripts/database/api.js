@@ -55,10 +55,23 @@ const getAllProducts = function (data) {
   })
 }
 
+const updateProduct = function (data) {
+  console.log('passing through update product api.js!!!')
+  return $.ajax({
+    url: app.host + '/products/' + app.product._id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   create,
   signIn,
   changePassword,
   signOut,
-  getAllProducts
+  getAllProducts,
+  updateProduct
 }

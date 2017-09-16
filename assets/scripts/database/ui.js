@@ -59,6 +59,14 @@ const onGetAllProductsError = function (response) {
   console.error(response)
 }
 
+const onUpdateProductSuccess = function (data) {
+  console.log('You edit it good!!!')
+}
+
+const onUpdateProductFail = function (response) {
+  console.log('Your edit fails')
+}
+
 module.exports = {
   onCreateSuccess,
   onError,
@@ -69,5 +77,7 @@ module.exports = {
   onSignOutSuccess,
   onSignOutError,
   onGetAllProductsSuccess,
-  onGetAllProductsError
+  onGetAllProductsError,
+  onUpdateProductSuccess,
+  onUpdateProductFail
 }
