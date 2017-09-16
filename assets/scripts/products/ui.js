@@ -4,6 +4,7 @@ const app = require('../store.js')
 
 const onCreateProductSuccess = function () {
   console.log('You successfully created a product')
+}
 
 const onCreateProductFail = function () {
   console.error(error)
