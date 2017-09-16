@@ -47,7 +47,7 @@ const signOut = function () {
 const getAllProducts = function (data) {
   console.log('passing through api.js')
   return $.ajax({
-    url: app.host + '/products/' + data.id,
+    url: app.host + '/products/',
     method: 'GET',
     headers: {
       Authorization: 'Token token=' + app.user.token
