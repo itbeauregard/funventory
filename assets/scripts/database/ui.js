@@ -38,14 +38,14 @@ const onSignOutError = function (response) {
 
 const onGetAllProductsSuccess = function (data) {
   console.log('first line inside function')
-  console.log(data)
+  console.log(data.products)
   $(() => {
     const theTemplateScript = $('#product-inventory-template').html()
     // Compile the template
     const theTemplate = Handlebars.compile(theTemplateScript)
     // Define our data object
     const context = {
-      fields: data
+      fields: data.products
     }
     // Pass our data to the template
     const theCompiledHtml = theTemplate(context)
