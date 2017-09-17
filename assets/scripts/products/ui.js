@@ -6,7 +6,7 @@ const onCreateProductSuccess = function () {
   console.log('You successfully created a product')
 }
 
-const onCreateProductFail = function () {
+const onCreateproductError = function () {
   console.error(error)
 }
 
@@ -14,7 +14,7 @@ const onUpdateProductSuccess = function () {
   console.log('You edit it good!!!')
 }
 
-const onUpdateProductFail = function () {
+const onUpdateproductError = function () {
   console.log('Your edit fails')
 }
 
@@ -41,11 +41,21 @@ const onGetAllProductsError = function (response) {
   console.error(response)
 }
 
+const onDeleteProductSuccess = function (data) {
+  console.log(data)
+}
+
+const onDeleteProductError = function (error) {
+  console.error(error)
+}
+
 module.exports = {
   onCreateProductSuccess,
-  onCreateProductFail,
+  onCreateproductError,
   onUpdateProductSuccess,
-  onUpdateProductFail,
+  onUpdateproductError,
   onGetAllProductsSuccess,
   onGetAllProductsError
+  onDeleteProductSuccess,
+  onDeleteProductError
 }
