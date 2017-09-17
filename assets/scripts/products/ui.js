@@ -49,6 +49,14 @@ const onDeleteProductError = function (error) {
   console.error(error)
 }
 
+const onGetProductSuccess = function (data) {
+  console.log(data)
+}
+
+const onGetProductError = function (error) {
+  console.error(error)
+}
+
 module.exports = {
   onCreateProductSuccess,
   onCreateproductError,
@@ -57,5 +65,7 @@ module.exports = {
   onGetAllProductsSuccess,
   onGetAllProductsError
   onDeleteProductSuccess,
-  onDeleteProductError
+  onDeleteProductError,
+  onGetProductSuccess,
+  onGetProductError
 }
