@@ -12,7 +12,24 @@ const onCreateProduct = function (event) {
   // may need to update name of create after html is created
   productApi.createProduct(data)
     .then(productUi.onCreateProductSuccess)
-    .catch(productUi.onCreateProductFail)
+    .catch(productUi.onCreateProductError)
+}
+
+// is 'const data' necessary for functionality?
+const onGetAllProducts = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  productApi.getAllProducts(data)
+    .then(productUi.onGetAllProductsSuccess)
+    .catch(productUi.onGetAllProductsError)
+}
+
+const onGetProduct = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  productApi.getProduct(data)
+    .then(productUi.onGetProductSuccess)
+    .catch(productUi.onGetProductError)
 }
 
 const onUpdateProduct = function (event) {
@@ -21,10 +38,20 @@ const onUpdateProduct = function (event) {
     // may need to update name of create after html is created
   productApi.updateProduct(data)
     .then(productUi.onUpdateProductSuccess)
-    .catch(productUi.onUpdateProductFail)
+    .catch(productUi.onUpdateProductError)
+}
+
+const onDeleteProduct = function (event) {
+  event.preventDefault()
+  userApi.deleteProduct()
+    .then(productUi.onDeleteProductSuccess)
+    .catch(productUi.onDeleteProductError)
 }
 
 module.exports = {
-  onCreateCreateProduct,
+  onCreateProduct,
+  onGetAllProducts,
+  onGetProduct,
   onUpdateProduct,
+  onDeleteProduct
 }

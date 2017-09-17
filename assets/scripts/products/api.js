@@ -11,7 +11,7 @@ const createProduct = function (data) {
   })
 }
 
-const indexOfProducts = function () {
+const getAllProducts = function () {
   return $.ajax({
     url: app.host + '/products',
     method: 'GET',
@@ -21,7 +21,7 @@ const indexOfProducts = function () {
   })
 }
 
-const showProduct = function () {
+const getProduct = function () {
   return $.ajax({
     url: app.host + '/products/' + app.products._id,
     method: 'GET',
@@ -55,8 +55,8 @@ const deleteProduct = function () {
 
 module.exports = {
   createProduct,
-  indexOfProducts,
-  showProduct,
+  getAllProducts,
+  getProduct,
   updateProduct,
   deleteProduct
 }
