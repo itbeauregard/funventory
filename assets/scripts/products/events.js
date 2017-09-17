@@ -35,7 +35,6 @@ const onGetProduct = function (event) {
 const onUpdateProduct = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-    // may need to update name of create after html is created
   productApi.updateProduct(data)
     .then(productUi.onUpdateProductSuccess)
     .catch(productUi.onUpdateProductError)
@@ -43,7 +42,8 @@ const onUpdateProduct = function (event) {
 
 const onDeleteProduct = function (event) {
   event.preventDefault()
-  userApi.deleteProduct()
+  // need 'const data' if no form?
+  productApi.deleteProduct()
     .then(productUi.onDeleteProductSuccess)
     .catch(productUi.onDeleteProductError)
 }

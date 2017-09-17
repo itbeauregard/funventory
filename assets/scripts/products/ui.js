@@ -6,8 +6,8 @@ const onCreateProductSuccess = function () {
   console.log('You successfully created a product')
 }
 
-const onCreateproductError = function () {
-  console.error(error)
+const onCreateproductError = function (response) {
+  console.error(response)
 }
 
 const onUpdateProductSuccess = function () {
@@ -63,7 +63,7 @@ module.exports = {
   onUpdateProductSuccess,
   onUpdateproductError,
   onGetAllProductsSuccess,
-  onGetAllProductsError
+  onGetAllProductsError,
   onDeleteProductSuccess,
   onDeleteProductError,
   onGetProductSuccess,
