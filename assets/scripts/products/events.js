@@ -17,6 +17,7 @@ const onCreateProduct = function (event) {
 
 // is 'const data' necessary for functionality?
 const onGetAllProducts = function (event) {
+  console.log('passing through get all events.js')
   event.preventDefault()
   const data = getFormFields(event.target)
   productApi.getAllProducts(data)

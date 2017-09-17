@@ -12,6 +12,7 @@ const createProduct = function (data) {
 }
 
 const getAllProducts = function () {
+  console.log('passing through getall api.js')
   return $.ajax({
     url: app.host + '/products',
     method: 'GET',
