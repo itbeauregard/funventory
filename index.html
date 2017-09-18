@@ -28,16 +28,21 @@
 
         <form class="accounts" id="create-account">
           <h2>Create a new account</h2>
-          <input required type="text" name="credentials[email]" placeholder="Username">
-          <input required type="password" name="credentials[password]" placeholder="Password">
-          <input required type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <label>Username<input required type="text" name="credentials[email]"></label>
+          <br>
+          <label>Password<input required type="password" name="credentials[password]"></label>
+          <br>
+          <label>Confirm Password<input required type="password" name="credentials[password_confirmation]"></label>
+          <br>
           <button type="submit" id="create-button">Create an Account</button>
         </form>
 
         <form class="accounts" id="change-password">
           <h2> Change password</h2>
-          <input required type="password" name="passwords[old]" placeholder="Old password">
-          <input required type="password" name="passwords[new]" placeholder="New password">
+          <label>Old Password<input required type="password" name="passwords[old]"></label>
+          <br>
+          <label>New Password<input required type="password" name="passwords[new]"></label>
+          <br>
           <button type="submit" id="change-password-button">Change password</button>
         </form>
 
