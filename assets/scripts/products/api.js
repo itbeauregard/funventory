@@ -35,10 +35,10 @@ const getProduct = function () {
   })
 }
 
-const updateProduct = function (data) {
+const updateProduct = function (data, id) {
   console.log('passing through api.js!')
   return $.ajax({
-    url: app.host + '/products/' + app.product._id,
+    url: app.host + '/products/' + id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + app.user.token

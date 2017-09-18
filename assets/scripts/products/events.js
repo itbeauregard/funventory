@@ -33,12 +33,19 @@ const onGetProduct = function (event) {
     .catch(productUi.onGetProductError)
 }
 
+let id = ''
+
+const onClickUpdate = function (event) {
+  id = $(this).data('id')
+}
+
 const onUpdateProduct = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   console.log('passing through events.js')
   console.log(data)
-  productApi.updateProduct(data)
+  console.log(id)
+  productApi.updateProduct(data, id)
     .then(productUi.onUpdateProductSuccess)
     .catch(productUi.onUpdateProductError)
 }
@@ -58,6 +65,7 @@ module.exports = {
   onCreateProduct,
   onGetAllProducts,
   onGetProduct,
+  onClickUpdate,
   onUpdateProduct,
   onDeleteProduct
 }
