@@ -36,7 +36,7 @@ const getProduct = function () {
 }
 
 const updateProduct = function (data) {
-  console.log('passing through products stuff!!!')
+  console.log('passing through api.js!')
   return $.ajax({
     url: app.host + '/products/' + app.product._id,
     method: 'PATCH',
@@ -47,9 +47,10 @@ const updateProduct = function (data) {
   })
 }
 
-const deleteProduct = function () {
+const deleteProduct = function (id) {
+  console.log('passing through api.js')
   return $.ajax({
-    url: app.host + '/products/' + app.product._id,
+    url: app.host + '/products/' + id,
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + app.user.token

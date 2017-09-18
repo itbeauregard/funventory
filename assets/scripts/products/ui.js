@@ -11,7 +11,7 @@ const onCreateproductError = function (response) {
 }
 
 const onUpdateProductSuccess = function () {
-  console.log('You edit it good!!!')
+  console.log('You update it good!!!')
 }
 
 const onUpdateproductError = function () {
@@ -41,8 +41,9 @@ const onGetAllProductsError = function (response) {
   console.error(response)
 }
 
-const onDeleteProductSuccess = function (data) {
-  console.log(data)
+const onDeleteProductSuccess = function (id) {
+  console.log('you deleted a product!')
+  $('.' + id).remove()
 }
 
 const onDeleteProductError = function (error) {
