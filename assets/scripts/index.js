@@ -22,4 +22,5 @@ $(() => {
   $('#signout-account').on('submit', accountEvents.onSignOut)
 
   $('#get-table').on('click', productEvents.onGetAllProducts)
+  $('#create-product').on('submit', productEvents.onCreateProduct)
 })

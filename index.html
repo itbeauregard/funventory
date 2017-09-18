@@ -41,8 +41,28 @@
       <form class="accounts" id="signout-account">
         <h1> Sign out</h1>
         <button type="submit" id="signout-button">Sign out</button>
-      </form
+      </form>
 
+      <!-- Create product entry -->
+      <form class="products" id="create-product">
+        <h1>Add Product</h1>
+        <input required type='text' name='product[product_name]' placeholder='Product Name'>
+        <input required type='number' name='product[sku_number]' placeholder='SKU Number'>
+        <select name='product[department]'>
+          <option value='Produce'>Produce</option>
+          <option value='Meat'>Meat</option>
+          <option value='Dairy'>Dairy</option>
+          <option value='Grocery'>Grocery</option>
+          <option value='Health and Wellness'>Health and Wellness</option>
+          <option value='Bakery'>Bakery</option>
+          <option value='Deli'>Deli</option>
+        </select>
+        <input required type='number' name='product[quantity_number]' placeholder='Quantity'>
+        <input required type='text' name='product[quantity_unit]' placeholder='Unit Type (e.g. bushels)'>
+        <button type='submit' id='create-product-button'>Add Product</button>
+      </form>
+
+      <!-- Get All Products -->
       <button id='get-table' class='button' type='submit'>Get Inventory Table</button>
 
       <div id='table-holder'>

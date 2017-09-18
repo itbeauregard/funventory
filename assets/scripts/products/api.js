@@ -7,11 +7,15 @@ const createProduct = function (data) {
   return $.ajax({
     url: app.host + '/products',
     method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
     data
   })
 }
 
 const getAllProducts = function () {
+  console.log('passing through getall api.js')
   return $.ajax({
     url: app.host + '/products',
     method: 'GET',
