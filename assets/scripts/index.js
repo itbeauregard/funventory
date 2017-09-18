@@ -2,7 +2,7 @@
 
 const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
-const accountEvents = require('./database/events.js')
+const accountEvents = require('./users/events.js')
 const productEvents = require('./products/events.js')
 
 $(() => {
@@ -26,4 +26,6 @@ $(() => {
   $(document).on('click', '.delete-product-button', productEvents.onDeleteProduct)
   $(document).on('submit', '.update-product-form', productEvents.onUpdateProduct)
   $(document).on('click', '.update-product-button', productEvents.onClickUpdate)
+
+  $('.table-page').children().hide()
 })
