@@ -17,6 +17,17 @@
       <h1>Funventory!</h1>
 
       <div class='account-forms'>
+
+        <div id='user-messages'>
+          <p class="error" id="password-change-error">Double check your old password.</p>
+          <p class="success" id="password-change-success">You successfully changed your password!</p>
+          <p class="error" id="create-account-error">Your username may be already taken, try another.</p>
+          <p class="error" id="password-match-error">Your password fields don't match.</p>
+          <p class="success" id="create-account-success">You successfully created an account!</p>
+          <p class="error" id="login-error">Wrong password or email.</p>
+          <p class="error" id="sign-in-please">Please sign in to your account or sign up for a new one.</p>
+        </div>
+
         <form class="accounts" id="signin-account">
           <h2> Sign in to your account</h2>
           <label>Username<input required type="text" name="credentials[email]"></label>
