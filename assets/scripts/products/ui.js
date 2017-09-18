@@ -19,6 +19,7 @@ const onUpdateproductError = function () {
 }
 
 const onGetAllProductsSuccess = function (data) {
+  $('#table-holder').empty()
   console.log('first line inside function')
   console.log(data.products)
   $(() => {
