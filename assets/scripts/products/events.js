@@ -44,7 +44,10 @@ const onUpdateProduct = function (event) {
 const onDeleteProduct = function (event) {
   event.preventDefault()
   // need 'const data' if no form?
-  productApi.deleteProduct()
+  const id = $(this).data('id')
+  console.log('passing through events.js')
+  console.log(id)
+  productApi.deleteProduct(id)
     .then(productUi.onDeleteProductSuccess)
     .catch(productUi.onDeleteProductError)
 }
