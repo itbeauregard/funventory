@@ -18,7 +18,7 @@ When you are ready to push your feature:
 
 <!-- html images
 <img src="url" alt="some_text" style="width:width;height:height;"> -->
-<img src="https://imgur.com/jNwDWvR" alt="Login_1user" style="width:50%;height:50%;">
-<img src="https://imgur.com/NmW0DeA" alt="Login_2users" style="width:50%;height:50%;">
-<img src="https://imgur.com/Q4D0bkv" alt="wireframe" style="width:50%;height:50%;">
-<img src="https://imgur.com/D3o4lE6" alt="ERD" style="width:50%;height:50%;">
+<img src="https://imgur.com/jNwDWvR.png" alt="Login_1user" style="width:50%;height:50%;">
+<img src="https://imgur.com/NmW0DeA.png" alt="Login_2users" style="width:50%;height:50%;">
+<img src="https://imgur.com/Q4D0bkv.png" alt="wireframe" style="width:50%;height:50%;">
+<img src="https://imgur.com/D3o4lE6.png" alt="ERD" style="width:50%;height:50%;">
