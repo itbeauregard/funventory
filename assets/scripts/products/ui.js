@@ -11,7 +11,7 @@ const onCreateproductError = function (response) {
 }
 
 const onUpdateProductSuccess = function () {
-  console.log('You edit it good!!!')
+  console.log('You update it good!!!')
 }
 
 const onUpdateproductError = function () {

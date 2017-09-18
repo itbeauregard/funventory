@@ -36,6 +36,8 @@ const onGetProduct = function (event) {
 const onUpdateProduct = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
+  console.log('passing through events.js')
+  console.log(data)
   productApi.updateProduct(data)
     .then(productUi.onUpdateProductSuccess)
     .catch(productUi.onUpdateProductError)

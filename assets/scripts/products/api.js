@@ -36,7 +36,7 @@ const getProduct = function () {
 }
 
 const updateProduct = function (data) {
-  console.log('passing through products stuff!!!')
+  console.log('passing through api.js!')
   return $.ajax({
     url: app.host + '/products/' + app.product._id,
     method: 'PATCH',
