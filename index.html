@@ -16,32 +16,34 @@
     <body class="container-fluid">
       <h1>Inventory</h1>
 
-      <form class="accounts" id="create-account">
-        <h1>Create a new account</h1>
-        <input required type="text" name="credentials[email]" placeholder="Username">
-        <input required type="password" name="credentials[password]" placeholder="Password">
-        <input required type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-        <button type="submit" id="create-button">Create an Account</button>
-      </form>
+      <div class='account-forms'>
+        <form class="accounts" id="create-account">
+          <h1>Create a new account</h1>
+          <input required type="text" name="credentials[email]" placeholder="Username">
+          <input required type="password" name="credentials[password]" placeholder="Password">
+          <input required type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <button type="submit" id="create-button">Create an Account</button>
+        </form>
 
-      <form class="accounts" id="signin-account">
-        <h1> Sign in to your account</h1>
-        <input required type="text" name="credentials[email]" placeholder="Username">
-        <input required type="password" name="credentials[password]" placeholder="Password">
-        <button type="submit" id="signin-button">Sign in</button>
-      </form>
+        <form class="accounts" id="signin-account">
+          <h1> Sign in to your account</h1>
+          <input required type="text" name="credentials[email]" placeholder="Username">
+          <input required type="password" name="credentials[password]" placeholder="Password">
+          <button type="submit" id="signin-button">Sign in</button>
+        </form>
 
-      <form class="accounts" id="change-password">
-        <h1> Change password</h1>
-        <input required type="password" name="passwords[old]" placeholder="Old password">
-        <input required type="password" name="passwords[new]" placeholder="New password">
-        <button type="submit" id="change-password-button">Change password</button>
-      </form>
+        <form class="accounts" id="change-password">
+          <h1> Change password</h1>
+          <input required type="password" name="passwords[old]" placeholder="Old password">
+          <input required type="password" name="passwords[new]" placeholder="New password">
+          <button type="submit" id="change-password-button">Change password</button>
+        </form>
 
-      <form class="accounts" id="signout-account">
-        <h1> Sign out</h1>
-        <button type="submit" id="signout-button">Sign out</button>
-      </form>
+        <form class="accounts" id="signout-account">
+          <h1> Sign out</h1>
+          <button type="submit" id="signout-button">Sign out</button>
+        </form>
+      </div>
 
       <!-- Create product entry -->
       <form class="products" id="create-product">

@@ -1,2 +1,16 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+body {
+  text-align: center;
+  background-color: #8580B0;
+  color: white;
+}
+
+h1 {
+  font-weight: 300;
+}
+
+.account-forms {
+  border: 5px solid #059005;
+}
