@@ -28,6 +28,17 @@ input {
   margin-left: 15px;
 }
 
+select {
+  color: #8C97A2;
+}
+
 .account-forms {
   border: 5px solid #059005;
+  max-width: 700px;
+  margin: auto;
+  border-radius: 5px;
+}
+
+::-webkit-input-placeholder {
+  color: white;
 }
