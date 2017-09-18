@@ -33,10 +33,19 @@ const onGetProduct = function (event) {
     .catch(productUi.onGetProductError)
 }
 
+let id = ''
+
+const onClickUpdate = function (event) {
+  id = $(this).data('id')
+}
+
 const onUpdateProduct = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  productApi.updateProduct(data)
+  console.log('passing through events.js')
+  console.log(data)
+  console.log(id)
+  productApi.updateProduct(data, id)
     .then(productUi.onUpdateProductSuccess)
     .catch(productUi.onUpdateProductError)
 }
@@ -44,7 +53,10 @@ const onUpdateProduct = function (event) {
 const onDeleteProduct = function (event) {
   event.preventDefault()
   // need 'const data' if no form?
-  productApi.deleteProduct()
+  const id = $(this).data('id')
+  console.log('passing through events.js')
+  console.log(id)
+  productApi.deleteProduct(id)
     .then(productUi.onDeleteProductSuccess)
     .catch(productUi.onDeleteProductError)
 }
@@ -53,6 +65,7 @@ module.exports = {
   onCreateProduct,
   onGetAllProducts,
   onGetProduct,
+  onClickUpdate,
   onUpdateProduct,
   onDeleteProduct
 }

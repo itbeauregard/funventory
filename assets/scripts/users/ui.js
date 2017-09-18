@@ -1,6 +1,7 @@
 'use strict'
 
 const app = require('../store.js')
+const ux = require('./ux.js')
 
 const onCreateSuccess = function () {
   console.log('You successfully created an account')
@@ -11,7 +12,8 @@ const onError = function (response) {
 }
 
 const onSignInSuccess = function (data) {
-  console.log('You successfully sign in')
+  ux.signIn()
+  console.log('You successfully pooped')
   app.user = data.user
 }
 
