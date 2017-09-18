@@ -26,4 +26,6 @@ $(() => {
   $(document).on('click', '.delete-product-button', productEvents.onDeleteProduct)
   $(document).on('submit', '.update-product-form', productEvents.onUpdateProduct)
   $(document).on('click', '.update-product-button', productEvents.onClickUpdate)
+
+  $('.table-page').children().hide()
 })
