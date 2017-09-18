@@ -1,5 +1,5 @@
 'use strict'
 
 module.exports = {
-  host: 'https://funventory.herokuapp.com/'
+  host: 'https://funventory.herokuapp.com'
 }
