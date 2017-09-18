@@ -48,7 +48,6 @@ const updateProduct = function (data, id) {
 }
 
 const deleteProduct = function (id) {
-  console.log('passing through api.js')
   return $.ajax({
     url: app.host + '/products/' + id,
     method: 'DELETE',
