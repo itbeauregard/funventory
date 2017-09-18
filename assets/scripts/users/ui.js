@@ -13,12 +13,11 @@ const onError = function (response) {
 
 const onSignInSuccess = function (data) {
   ux.signIn()
-  console.log('You successfully pooped')
   app.user = data.user
 }
 
 const onSignInError = function (response) {
-  console.error(response)
+  $(() => $('#sign-in-error').show())
 }
 
 const onChangePasswordSuccess = function () {
