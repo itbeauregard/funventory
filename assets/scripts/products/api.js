@@ -7,6 +7,9 @@ const createProduct = function (data) {
   return $.ajax({
     url: app.host + '/products',
     method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
     data
   })
 }
