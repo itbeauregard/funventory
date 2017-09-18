@@ -14,3 +14,11 @@ When you are ready to push your feature:
 1. Commit all changes.
 2. Run ```git push origin <branch-name>```
 3. Submit a pull request to the Team Pug Git Hub ```development``` branch
+
+
+<!-- html images
+<img src="url" alt="some_text" style="width:width;height:height;"> -->
+<img src="https://imgur.com/jNwDWvR" alt="Login_1user" style="width:50%;height:50%;">
+<img src="https://imgur.com/NmW0DeA" alt="Login_2users" style="width:50%;height:50%;">
+<img src="https://imgur.com/Q4D0bkv" alt="wireframe" style="width:50%;height:50%;">
+<img src="https://imgur.com/D3o4lE6" alt="ERD" style="width:50%;height:50%;">
