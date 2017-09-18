@@ -2,7 +2,8 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://funventory.herokuapp.com/'
+    production: 'https://funventory.herokuapp.com',
+    development: 'http://localhost:4741'
   }
 }
 
