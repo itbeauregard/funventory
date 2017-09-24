@@ -7,6 +7,10 @@ body {
   color: white;
 }
 
+h1 {
+  margin-bottom: 30px;
+}
+
 h1,
 h2 {
   font-weight: 300;
@@ -68,4 +72,8 @@ th {
 .sign-out-div form {
   display: inline;
   margin-left: 15px;
+}
+
+.start-forms {
+  padding-bottom: 15px;
 }
