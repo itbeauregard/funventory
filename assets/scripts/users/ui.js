@@ -18,7 +18,7 @@ const onSignInSuccess = function (data) {
 }
 
 const onSignInError = function (response) {
-  console.error(response)
+  $(() => $('#sign-in-error').show())
 }
 
 const onChangePasswordSuccess = function () {
