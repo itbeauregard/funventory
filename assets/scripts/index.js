@@ -29,4 +29,5 @@ $(() => {
 
   $('.table-page').children().hide()
   $('.user-messages').children().hide()
+  $('.sign-out-div').hide()
 })
