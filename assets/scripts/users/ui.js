@@ -23,6 +23,7 @@ const onSignInError = function (response) {
 
 const onChangePasswordSuccess = function () {
   console.log('You succesfully change your password')
+  ux.changePasswordSuccess()
 }
 
 const onChangePasswordError = function (response) {

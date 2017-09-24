@@ -41,7 +41,12 @@ const showChangePassword = function () {
 
 const changePasswordSuccess = function () {
   $(() => {
+    $('.account-actions-holder').children().hide()
+    $('.welcome').hide()
 
+    $('.table-page').children().show()
+    $('.sign-out-div').show()
+    $('#reveal-change-password').show()
   })
 }
 
