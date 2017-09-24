@@ -4,6 +4,7 @@ const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const accountEvents = require('./users/events.js')
 const productEvents = require('./products/events.js')
+const ux = require('./users/ux.js')
 
 $(() => {
   setAPIOrigin(location, config)
@@ -30,4 +31,7 @@ $(() => {
   $('.table-page').children().hide()
   $('.user-messages').children().hide()
   $('.sign-out-div').hide()
+  $('#change-password').hide()
+
+  $('#reveal-change-password').on('click', ux.showChangePassword)
 })
