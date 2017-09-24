@@ -8,7 +8,7 @@ const onCreateSuccess = function () {
 }
 
 const onError = function (response) {
-  console.error(response)
+  $(() => $('#create-account-error').show())
 }
 
 const onSignInSuccess = function (data) {
