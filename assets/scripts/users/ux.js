@@ -18,6 +18,7 @@ const signOut = function () {
     $('.table-page').children().hide()
     $('.user-messages').children().hide()
     $('.sign-out-div').hide()
+    $('#table-holder').empty()
   })
 }
 
