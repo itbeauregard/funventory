@@ -2,13 +2,27 @@
 
 const signIn = function () {
   $(() => {
-    console.log('in the beginning')
-    $('.account-forms').children().hide()
+    $('.account-actions-holder').children().hide()
+    $('.welcome').hide()
+
     $('.table-page').children().show()
-    console.log('in the end it doesnt even matter')
+    $('.sign-out-div').show()
+  })
+}
+
+const signOut = function () {
+  $(() => {
+    $('.account-actions-holder').children().show()
+    $('.welcome').show()
+
+    $('.table-page').children().hide()
+    $('.user-messages').children().hide()
+    $('.sign-out-div').hide()
+    $('#table-holder').empty()
   })
 }
 
 module.exports = {
-  signIn
+  signIn,
+  signOut
 }
