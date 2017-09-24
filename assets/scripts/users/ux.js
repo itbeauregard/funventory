@@ -2,7 +2,7 @@
 
 const signIn = function () {
   $(() => {
-    $('.account-forms').children().hide()
+    $('.account-actions-holder').children().hide()
     $('.table-page').children().show()
   })
 }
