@@ -26,7 +26,7 @@ const onChangePasswordSuccess = function () {
 }
 
 const onChangePasswordError = function (response) {
-  console.log(response)
+  $(() => $('#password-change-error').show())
 }
 
 const onSignOutSuccess = function () {
