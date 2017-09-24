@@ -34,7 +34,6 @@ const showChangePassword = function () {
     $('.user-messages').children().hide()
     $('.start-forms').hide()
     $('#reveal-change-password').hide()
-    $('.user-messages').hide()
     $('#table-holder').empty()
   })
 }
