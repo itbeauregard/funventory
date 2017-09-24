@@ -28,6 +28,4 @@ $(() => {
   $(document).on('click', '.update-product-button', productEvents.onClickUpdate)
 
   $('.table-page').children().hide()
-  $('.user-messages').children().hide()
-  $('.sign-out-div').hide()
 })
