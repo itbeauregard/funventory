@@ -43,7 +43,11 @@ const updateProduct = function (data, id) {
     headers: {
       Authorization: 'Token token=' + app.user.token
     },
-    data
+    data: {
+      'product': {
+        'quantity_number': data.quantity_number
+      }
+    }
   })
 }
 

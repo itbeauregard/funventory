@@ -43,7 +43,7 @@ const onUpdateProduct = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   console.log('passing through events.js')
-  console.log(data)
+  console.log(data.quantity_number)
   console.log(id)
   productApi.updateProduct(data, id)
     .then(productUi.onUpdateProductSuccess)
