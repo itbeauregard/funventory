@@ -32,6 +32,7 @@ const onChangePasswordError = function (response) {
 const onSignOutSuccess = function () {
   console.log('You successfully sign out')
   app.user = null
+  ux.signOut()
 }
 
 const onSignOutError = function (response) {
