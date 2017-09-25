@@ -14,8 +14,9 @@ const onUpdateProductSuccess = function () {
   console.log('You update it good!!!')
 }
 
-const onUpdateproductError = function () {
-  console.log('Your edit fails')
+const onUpdateProductError = function () {
+  console.log('Your update fails')
+  $('#myModal').modal('show')
 }
 
 const onGetAllProductsSuccess = function (data) {
@@ -62,7 +63,7 @@ module.exports = {
   onCreateProductSuccess,
   onCreateproductError,
   onUpdateProductSuccess,
-  onUpdateproductError,
+  onUpdateProductError,
   onGetAllProductsSuccess,
   onGetAllProductsError,
   onDeleteProductSuccess,
